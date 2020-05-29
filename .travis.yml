@@ -12,8 +12,8 @@ script:
 deploy:
     provider: heroku
     # region: "United States"   
-    api_key:
-        secure: "62fcbabb-0b52-485d-a3a3-3d10f5b70ccb"
+    # api_key:
+    #     secure: "62fcbabb-0b52-485d-a3a3-3d10f5b70ccb"
     app: "docker-react-eti"
     on: 
         branch: master
