@@ -8,3 +8,12 @@ before_install:
 
 script:
     - docker run -e CI=true etiadam/docker-react npm run test -- --coverage
+
+deploy:
+    provider: heroku
+    # region: "United States"   
+    api_key:
+        secure: "$HEROKU_API_KEY"
+    app: "docker-react-eti"
+    on: 
+        branch: master
