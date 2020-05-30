@@ -1,24 +1,17 @@
-language: generic 
+language: generic
 sudo: required
 services:
-    - docker
-
+- docker
 before_install:
-    - docker build -t etiadam/docker-react -f Dockerfile.dev .
-
+- docker build -t etiadam/docker-react -f Dockerfile.dev .
 script:
-    - docker run -e CI=true etiadam/docker-react npm run test -- --coverage
-
+- docker run -e CI=true etiadam/docker-react npm run test -- --coverage
 deploy:
-    provider: heroku
-    skip_cleanup: true
-    # region: "United States"   
-    api_key:
-        secure: "2fdb57df-20f1-4523-a688-d758505d3e71"
-    app: "docker-react-eti"
-    on: 
-        branch: master
-        repo: Etiadam/docker-react
-    # access_key_id: "$HEROKU_OAUTH_ID"
-    # secret_access_key:
-    #     secure: "$HEROKU_OAUTH_SECRET"
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: dJ6LHEqlaB0LJlWlBG72z5lH2HqkeHjuh+lbgOI1zVXPYQVA+HUe8icKqLt0LIqHp0NkwH6JEjtt/fPmHOsj/dzuBuKGnj1FuD5klCo2MZDFNF9umfhODDQc6mYTWt96IGM8qixlrNsS3uNgQbBKdfXL/7F75p/Q+9EtXA5tahBDqCzsW++9mTbcxFroul08RUgXgn9UVI8XXBcNUS9pXHSodKQ4E8uZo06iyIVhM/25luAgRh5wv03UnRPkBS+C9bUP6gEwjXI0JkBkadIdPbr/7MY3ahNXBEf52FTa/sEYbLy2LOEpOjeCiapvfu/Wrheu4c5RXf1EdoAqwIGENIpJXQw5uUkmlJ/2Q6f7sEWgyVo02Lq8tp1aUaCc4VEYHLpt7Vp/PPJerSMJwpM/UDDLvJMyxp5WYgxi6t5zDk5MIia7mzLXS0Y2s3F5fWsyICixtwtMHyXOuAdiwuS+eGxdsNSquYxVI3fPBj4F9mPjDysgH8vBpDtShKx/GsGBHqMbebuXfPFa2hcF9EH5687uL46RQzPAy/PiGjqD2R1mpf+rj82ivqeRpYU5gusdLzl6LQHN/NfRNVOplyHjfi7pDzMW2XI9TH9dvDLh91wZMBRr566YhZYNxe766MGYtbQPXdxb26t3/fn4E+fkfWo6c0F5YU6dCPzqJA2AeQU=
+  app: docker-react-eti
+  on:
+    branch: master
+    repo: Etiadam/docker-react
