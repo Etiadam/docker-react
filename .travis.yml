@@ -11,6 +11,7 @@ script:
 
 deploy:
     provider: heroku
+    skip_cleanup: true
     # region: "United States"   
     api_key:
         secure: "2fdb57df-20f1-4523-a688-d758505d3e71"
