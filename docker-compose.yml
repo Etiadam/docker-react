@@ -4,9 +4,9 @@ services:
         stdin_open: true
         build: 
             context: .
-            dockerfile: Dockerfile.dev
+            dockerfile: Dockerfile
         ports:
-            - "3001:3000"
+            - "3000:3000"
         working_dir: /app
         environment:
             - CHOKIDAR_USEPOLLING=true
