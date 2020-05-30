@@ -5,8 +5,8 @@ services:
         build: 
             context: .
             dockerfile: Dockerfile.dev
-        # environment:
-        #     - OUTPUT_PORT
+        environment:
+            - OUTPUT_PORT
         ports:
             - 8000:3000"
         working_dir: /app
