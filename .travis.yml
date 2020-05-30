@@ -10,7 +10,7 @@ script:
     - docker run -e CI=true etiadam/docker-react npm run test -- --coverage
 
 deploy:
-    provider: heroku:git
+    provider: heroku
     # region: "United States"   
     api_key:
         secure: "2fdb57df-20f1-4523-a688-d758505d3e71"
