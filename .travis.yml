@@ -18,6 +18,7 @@ deploy:
     app: "docker-react-eti"
     on: 
         branch: master
+        repo: Etiadam/docker-react
     # access_key_id: "$HEROKU_OAUTH_ID"
     # secret_access_key:
     #     secure: "$HEROKU_OAUTH_SECRET"
