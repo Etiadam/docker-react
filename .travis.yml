@@ -13,7 +13,7 @@ deploy:
     provider: heroku
     # region: "United States"   
     api_key:
-        secure: "$HEROKU_API_KEY"
+        secure: "2fdb57df-20f1-4523-a688-d758505d3e71"
     app: "docker-react-eti"
     on: 
         branch: master
