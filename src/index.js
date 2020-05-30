@@ -16,4 +16,5 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-
+const port = process.env.PORT || 3000;
+app.listen(port);
